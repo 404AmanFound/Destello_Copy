@@ -101,7 +101,7 @@ const expertiseDetails = [
     );
   }
 
-const Page_5 = () => {
+const Expertise = () => {
   const [currentSubImage, setCurrentSubImage] = useState(0);
   const intervalRef = useRef(null);
   const isAnimate = useRef(false)
@@ -236,4 +236,4 @@ const Page_5 = () => {
     </div>
   );
 }
-export default Page_5
+export default Expertise;

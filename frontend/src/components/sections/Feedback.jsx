@@ -6,7 +6,7 @@ import Page83 from "../../assets/images/Page83.avif";
 import Page84 from "../../assets/images/Page84.avif";
 import Page85 from "../../assets/images/Page85.avif";
 
-const Page_8 = () => {
+const Feedback = () => {
   let clientDetails = [
     {
       img: Page81,
@@ -238,5 +238,5 @@ const Page_8 = () => {
   );
 };
 
-export default Page_8;
+export default Feedback;
 //"rounded-2xl w-[40%] h-[60%] overflow-hidden"

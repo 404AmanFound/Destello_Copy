@@ -53,7 +53,7 @@ const textVariants = {
   },
 };
 
-const Page_6 = () => {
+const Progress = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
 
@@ -229,4 +229,4 @@ const Page_6 = () => {
   );
 }
 
-export default Page_6
+export default Progress;

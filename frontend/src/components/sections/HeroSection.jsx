@@ -4,24 +4,44 @@ import page2Image from "../../assets/images/page_2.webp";
 import ImageScrollAnimation from "../layout/ImageScrollAnimation";
 import heroImage_2 from "../../assets/images/Page3.avif";
 
-let pageText = [
+const pageText = [
   "We turn founder's bold ideas",
   "into unforgettable brands through the",
   "perfect fusion of strategy, design, and",
   "growth marketing.",
 ];
 
-let studioText = [
+const studioText = [
   "Since 2014, Destello has been a creative studio driven by a simple",
   "idea — to craft bold, meaningful, and beautiful experiences for the",
   "world's most ambitious brands.",
 ];
 
-let emotionText = [
+const emotionText = [
   "Rooted in design and guided by emotion, our work blends aesthetics",
   "with purpose — helping our clients stand out in the crowded digital",
   "landscape.",
 ];
+
+function AnimatedLines({ lines, className = "", lineClassName = "" }) {
+  return (
+    <div className={className}>
+      {lines.map((text, index) => (
+        <motion.span
+          key={text}
+          className={`block text-balance ${lineClassName}`}
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+        >
+          {text}
+        </motion.span>
+      ))}
+    </div>
+  );
+}
+
 
 function HeroSection() {
   const ref = useRef(null);
@@ -34,9 +54,9 @@ function HeroSection() {
 
   return (
     <>
-      <div className="flex flex-col w-full h-[80vh] relative">
-        <div className="flex flex-row gap-4 w-[85%] p-10 relative">
-          <motion.h3
+      <div className="flex flex-col w-full h-[41vw] relative ">
+        <div className="flex flex-row gap-4 w-full p-10 relative h-[30vh]">
+          <motion.p
             initial={{
               y: 30,
               opacity: 0,
@@ -49,11 +69,11 @@ function HeroSection() {
               duration: 0.8,
               delay: 0.5,
             }}
-            className="w-50 absolute left-12 top-30 indent-13 "
+            className="w-[12vw] text-[0.85vw] absolute left-[3vw] top-[11vh] indent-[1.3vw]"
           >
             Designing striking visions and digital worlds for iconic brands.
-          </motion.h3>
-          <motion.h1
+          </motion.p>
+          <motion.p
             initial={{
               y: 20,
               opacity: 0,
@@ -66,18 +86,18 @@ function HeroSection() {
               duration: 0.5,
               delay: 0.5,
             }}
-            className=" w-160 text-[31px] font-medium absolute right-18 top-30 leading-9 indent-32"
+            className=" w-[30vw] text-[1.5vw] absolute right-[20vw] top-[11vh] indent-[5.5vw]"
           >
             Since 2014, crafting transform digital experiences that matter.
-          </motion.h1>
+          </motion.p>
         </div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="w-full h-135 flex items-center justify-center absolute bottom-0 overflow-hidden"
+          className="w-full h-[27vw] flex items-center absolute bottom-0 overflow-hidden"
         >
-          <h1 className="text-[32vw] tracking-[-0.08em] ">destello</h1>
+          <h1 className="text-[32vw] text-center w-full tracking-[-0.08em] ">destello</h1>
         </motion.div>
       </div>
       <div className="w-full h-screen overflow-hidden" ref={ref}>

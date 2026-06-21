@@ -3,7 +3,7 @@ import Page71 from '../../assets/images/Page71.avif'
 import Page72 from '../../assets/images/Page72.avif'
 
 
-const Page_7 = () => {
+const Why_Choose_Us = () => {
   return (
     <div className="min-h-screen w-full bg-[#f0f0f0] flex items-center flex-col px-8 z-30">
       <hr className=" text-[#d4d1d1] w-full mt-20 " />
@@ -91,4 +91,4 @@ const Page_7 = () => {
   );
 }
 
-export default Page_7
+export default Why_Choose_Us;
