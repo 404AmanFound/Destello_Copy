@@ -1,6 +1,6 @@
 import { useState } from "react";
-import arrowBlack from "../../assets/svg/arrowblack.svg";
 import FAQ_Image from "../../assets/images/Page9.avif";
+import { LuArrowUpRight } from "react-icons/lu";
 import { motion, useScroll, AnimatePresence } from "motion/react";
 import ImageScrollAnimation from "../layout/ImageScrollAnimation";
 
@@ -50,12 +50,9 @@ const Page_9 = () => {
         <h1 className="text-7xl tracking-tight text-neutral-800 leading-20 py-8 absolute w-158 bottom-0 ">
           Frequently Asked Questions
         </h1>
-        <h1 className="flex items-center gap-2 absolute right-0 bottom-9 text-xl underline">
-          Contact us
-          <span>
-            <img className="h-3 w-3 -rotate-45" src={arrowBlack} alt="" />
-          </span>
-        </h1>
+        <button className="flex items-center gap-2 absolute right-0 bottom-9 text-xl button-hover">
+          Contact us <span><LuArrowUpRight /></span>
+        </button>
       </div>
       <hr className="w-full text-[#D1D1D1] " />
       <div className="min-h-[70vh] w-full py-8 flex">

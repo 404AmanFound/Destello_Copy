@@ -12,3 +12,8 @@
 .font-mona {
   font-family: "Mona Sans", sans-serif;
 }
+
+.button-hover {
+  font-family: "Mona Sans", sans-serif;
+  @apply relative cursor-pointer uppercase text-[0.9rem] flex items-center after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-current after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100;
+}

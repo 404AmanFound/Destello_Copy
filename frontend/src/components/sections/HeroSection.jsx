@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { LuArrowUpRight } from "react-icons/lu";
 import page2Image from "../../assets/images/page_2.webp";
 import ImageScrollAnimation from "../layout/ImageScrollAnimation";
 import heroImage_2 from "../../assets/images/Page3.avif";
@@ -54,8 +55,8 @@ function HeroSection() {
 
   return (
     <>
-      <div className="flex flex-col w-full h-[41vw] relative ">
-        <div className="flex flex-row gap-4 w-full p-10 relative h-[30vh]">
+      <div className="flex flex-col w-full min-h-[50vh] md:min-h-0 md:h-[41vw] relative ">
+        <div className="flex flex-col md:block gap-6 w-full p-6 pt-24 md:p-10 relative md:h-[30vh] z-10">
           <motion.p
             initial={{
               y: 30,
@@ -69,7 +70,7 @@ function HeroSection() {
               duration: 0.8,
               delay: 0.5,
             }}
-            className="w-[12vw] text-[0.85vw] absolute left-[3vw] top-[11vh] indent-[1.3vw]"
+            className="w-[85%] md:w-[12vw] text-base md:text-[0.85vw] md:absolute md:left-[3vw] md:top-[11vh] md:indent-[1.3vw]"
           >
             Designing striking visions and digital worlds for iconic brands.
           </motion.p>
@@ -86,7 +87,7 @@ function HeroSection() {
               duration: 0.5,
               delay: 0.5,
             }}
-            className=" w-[30vw] text-[1.5vw] absolute right-[20vw] top-[11vh] indent-[5.5vw]"
+            className="w-[95%] md:w-[30vw] text-lg md:text-[1.5vw] md:absolute md:right-[20vw] md:top-[11vh] md:indent-[5.5vw]"
           >
             Since 2014, crafting transform digital experiences that matter.
           </motion.p>
@@ -95,7 +96,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="w-full h-[27vw] flex items-center absolute bottom-0 overflow-hidden"
+          className="w-full mt-auto md:mt-0 md:h-[27vw] flex items-center md:absolute md:bottom-0 overflow-hidden leading-none"
         >
           <h1 className="text-[32vw] text-center w-full tracking-[-0.08em] ">destello</h1>
         </motion.div>
@@ -108,16 +109,16 @@ function HeroSection() {
           alt="Page 2"
         />
       </div>
-      <div className="w-full h-100 p-20 relative bg-[#f0f0f0]">
-        <h1 className="text-[40px] w-160 leading-11 bottom-20 right-40 absolute">
+      <div className="w-full min-h-[40vh] p-8 md:p-20 relative bg-[#f0f0f0] flex items-center md:block">
+        <h1 className="text-2xl text-nowrap md:text-[40px] w-full md:w-160 leading-tight md:leading-11 md:bottom-20 md:right-60 md:absolute">
           {pageText.map((text, index) => {
             return (
               <motion.span
                 key={index}
                 className={
                   index === 0
-                    ? "block indent-32 text-nowrap"
-                    : "block text-nowrap"
+                    ? "block md:indent-32 flex-wrap"
+                    : "block flex-wrap"
                 }
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -130,18 +131,18 @@ function HeroSection() {
           })}
         </h1>
       </div>
-      <hr className="w-[95%] mx-auto  opacity-30" />
-      <div className="relative flex w-full h-100 p-10 justify-between bg-[#f0f0f0]">
-        <div className="w-1/2 text-xl">
+      <hr className="w-[97%] mx-auto  opacity-30" />
+      <div className="relative flex flex-col md:flex-row w-full min-h-[35vh] md:h-100 p-8 md:px-10 justify-between bg-[#f0f0f0]">
+        <div className="w-full md:w-1/2 text-2xl md:text-xl md:mb-0">
           <h1>Building what tomorrow remembers.</h1>
         </div>
-        <div className=" w-1/2">
-          <h1 className="w-140 text-xl">
+        <div className="w-full md:w-1/2">
+          <h1 className="w-full md:w-140 text-lg md:text-xl text-nowrap">
             {studioText.map((text, index) => {
               return (
                 <motion.span
                   key={index}
-                  className="block text-nowrap"
+                  className="block"
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true, amount: 0.6 }}
@@ -152,12 +153,12 @@ function HeroSection() {
               );
             })}
           </h1>
-          <h1 className="w-140 text-xl mt-5">
+          <h1 className="w-full md:w-140 text-lg md:text-xl mt-5 text-nowrap">
             {emotionText.map((text, index) => {
               return (
                 <motion.span
                   key={index}
-                  className="block text-nowrap"
+                  className="block"
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true, amount: 0.6 }}
@@ -168,7 +169,7 @@ function HeroSection() {
               );
             })}
           </h1>
-          <button className="mt-5 text-xl">Learn More</button>
+          <button className="mt-8 md:mt-5 text-xl font-medium button-hover">Learn More <span><LuArrowUpRight /></span></button>
         </div>
       </div>
       <ImageScrollAnimation
@@ -176,7 +177,7 @@ function HeroSection() {
         isScaleAnimation={true}
         isY_Animation={true}
         className={
-          "w-full min-h-screen bg-[#f0f0f0] flex items-center justify-center py-10"
+          "w-full min-h-screen bg-[#f0f0f0] flex items-center justify-center"
         }
       />
     </>

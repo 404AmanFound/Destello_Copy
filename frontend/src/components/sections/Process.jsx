@@ -53,7 +53,7 @@ const textVariants = {
   },
 };
 
-const Progress = () => {
+const Process = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
 
@@ -229,4 +229,4 @@ const Progress = () => {
   );
 }
 
-export default Progress;
+export default Process;

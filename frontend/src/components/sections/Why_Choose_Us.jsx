@@ -1,18 +1,18 @@
-import ArrBlack from '../../assets/svg/arrowblack.svg'
+import ArrowBlack from '../../assets/svg/arrowblack.svg'
 import Page71 from '../../assets/images/Page71.avif'
 import Page72 from '../../assets/images/Page72.avif'
+import { LuArrowUpRight } from "react-icons/lu";
 
 
 const Why_Choose_Us = () => {
   return (
     <div className="min-h-screen w-full bg-[#f0f0f0] flex items-center flex-col px-8 z-30">
       <hr className=" text-[#d4d1d1] w-full mt-20 " />
-      <div className="w-full h-[5vh] mt-4 flex justify-between">
-        <h2>Why Choose us</h2>
-        <div className="flex items-center gap-1 cursor-pointer">
-          <h1 className="text-2xl">Let's talk</h1>
-          <img className="h-4 -rotate-45" src={ArrBlack} alt="Arrow" />
-        </div>
+      <div className="w-full h-[3vh] mt-4 flex justify-between">
+        <h2 className="text-xl">Why Choose us</h2>
+        <button className="button-hover">
+          Let's talk <span><LuArrowUpRight /></span>
+        </button>
       </div>
       <div
         className="w-full h-[70vh] grid gap-4 mt-14"
@@ -67,7 +67,7 @@ const Why_Choose_Us = () => {
             <h1 className="text-6xl">99%</h1>
             <h2 className="text-[#878787]">Success Rate</h2>
           </div>
-          <h1 className="underline text-xl self-end">View all works</h1>
+          <button className="button-hover text-xl self-end">View all works <span><LuArrowUpRight /></span></button>
         </div>
         <div className="bg-[#E8E8E8] rounded-2xl flex flex-col justify-between p-8">
           <div className="w-full h-auto flex flex-col gap-3">
